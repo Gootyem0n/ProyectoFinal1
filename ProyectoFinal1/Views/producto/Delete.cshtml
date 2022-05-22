@@ -1,0 +1,89 @@
+﻿@model ProyectoFinal1.Models.producto
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutCompras.cshtml";
+}
+
+<h2>Eliminar</h2>
+
+<h3>¿Estas seguro que quieres eliminar este registro?</h3>
+<div>
+    <h4>producto</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.descripcion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.descripcion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.precio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.precio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ult_actualizacion)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ult_actualizacion)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.imagen)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.imagen)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.existencia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.existencia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Categoria.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Categoria.nombre)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Eliminar" class="btn btn-default" /> |
+            @Html.ActionLink("Regresar", "Index")
+        </div>
+    }
+</div>

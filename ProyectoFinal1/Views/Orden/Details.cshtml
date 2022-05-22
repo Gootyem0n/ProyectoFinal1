@@ -1,0 +1,35 @@
+﻿@model ProyectoFinal1.Models.Orden_productos
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Orden_productos</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.cantidad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.cantidad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.producto.nombre)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.producto.nombre)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Orden_Producto }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
